@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title></title>
+    <!--<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/styles.css') }}"> -->
+</head>
+
+<body>
+
+    <header>
+        <div class="container">
+            <div id="brandname">
+                ML App
+            </div>
+            <h2>Spam Detector For SMS Messages</h2>
+
+        </div>
+    </header>
+    <p style="color:blue;font-size:20;text-align: center;"><b>Results for Comment</b></p>
+    <div class="ml-container">
+        <div class="results">
+
+
+
+            {% if prediction == 1%}
+            <h2 style="color:red;">Spam</h2>
+            {% elif prediction == 0%}
+            <h2 style="color:blue;">Not a Spam (It is a Ham)</h2>
+            {% endif %}
+
+        </div>
+    </div>
+
+    <style>
+        body {
+            font: 15px/1.5 Arial, Helvetica, sans-serif;
+            padding: 0px;
+            background-color: #f4f3f3;
+        }
+        
+        .container {
+            width: 100%;
+            margin: auto;
+            overflow: hidden;
+        }
+        
+        header {
+            background: #03A9F4;
+            border-bottom: #448AFF 3px solid;
+            height: 120px;
+            width: 100%;
+            padding-top: 30px;
+        }
+        
+        #brandname {
+            text-align: center;
+            font-size: 30px;
+            color: #fff;
+            margin: 10px;
+        }
+        
+        header h2 {
+            text-align: center;
+            color: #fff;
+        }
+        
+        .ml-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .results {
+            border-radius: 15px 50px;
+            background: rgb(206, 206, 243);
+            padding: 20px;
+            width: 200px;
+            height: 150px;
+        }
+    </style>
+
+</body>
+
+</html>
