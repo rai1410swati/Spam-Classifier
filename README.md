@@ -8,5 +8,5 @@ Naive Bayes Classifiers are a popular statistical technique of email filtering u
 
 ### To view the App visit:
 
-https://spam-classification-app.herokuapp.com/predict
+https://spam-classification-app.herokuapp.com/
 
